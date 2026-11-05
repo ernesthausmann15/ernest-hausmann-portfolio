@@ -1,0 +1,40 @@
+# Render Blueprint for ernesthausmann.dev
+# Render dashboard -> New -> Blueprint -> select this repository.
+# The site is a static export (next.config.mjs: output "export"), so it runs as a free Render
+# Static Site on Render's global CDN: no server, no cold starts.
+
+services:
+  - type: web
+    name: ernesthausmann-portfolio
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./out
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+    domains:
+      - ernesthausmann.dev
+      - www.ernesthausmann.dev
+    routes:
+      - type: redirect
+        source: /resume
+        destination: /resume/
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: Permissions-Policy
+        value: camera=(), microphone=(), geolocation=()
+      - path: /*
+        name: Strict-Transport-Security
+        value: max-age=31536000; includeSubDomains
+      - path: /_next/static/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
