@@ -77,7 +77,7 @@ export const DATA = {
   description:
     "AI engineer and full-stack developer. I design, build and launch secure AI products and web applications, from first idea to public release.",
   summary:
-    "I'm the founder of [Vrymdor](https://vrymdor.com), a security and AI governance company that I designed, built and launched on my own. Vrymdor helps small and mid-size businesses protect their servers and keep their AI agents in check, while their sensitive data stays under their control.\n\nBefore Vrymdor, I built production web applications with Next.js, TypeScript, React and PostgreSQL. Today I also work in IT systems and infrastructure at Loup Power District and study cybersecurity at Central Community College. I was a team captain on a national championship football team, and I bring the same habits to engineering: clear communication, ownership and steady execution.",
+    "I'm the founder of [Vrymdor](https://vrymdor.com), which makes the Vrymdor AI Node: a privacy filter that hides customer emails, card numbers and secret keys before any AI model reads them, and keeps a record of every run. I designed, built and launched it on my own.\n\nBefore Vrymdor, I built production web applications with Next.js, TypeScript, React and PostgreSQL. Today I also work in IT systems and infrastructure at Loup Power District and study cybersecurity at Central Community College. I was a team captain on a national championship football team, and I bring the same habits to engineering: clear communication, ownership and steady execution.",
   avatarUrl: "/logos/vrymdor.png",
   resumeUrl: "/resume/",
   navbar: [
@@ -121,23 +121,23 @@ export const DATA = {
     href: "https://vrymdor.com",
     logoUrl: "/logos/vrymdor.png",
     tagline:
-      "Security and AI governance for small and mid-size businesses, with their data kept under their control.",
+      "A privacy filter for AI: private details hidden before any AI model reads them.",
     status: "Publicly launched in November 2026",
     highlights: [
       {
-        icon: ShieldCheck,
-        title: "Business Security",
-        text: "Server monitoring and hourly self-scans that keep raw logs on the customer's own servers.",
-      },
-      {
         icon: BrainCircuit,
         title: "AI Node",
-        text: "A governance gateway that checks every AI agent request against company policy.",
+        text: "Hides emails, card numbers, US Social Security numbers and secret keys before an AI model reads the text, and records every run.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "Free tools",
+        text: "A secret scanner for n8n workflows and a live masking playground that run in the browser, plus the Arena, a public game that tests the masking.",
       },
       {
         icon: KeyRound,
-        title: "Human approval",
-        text: "High-risk changes wait for a person to approve them with a hardware security key.",
+        title: "Self-serve plans",
+        text: "A free Community plan with no card, and paid plans that start with a 14 day trial, all started and changed online.",
       },
       {
         icon: Network,
@@ -172,9 +172,9 @@ export const DATA = {
       end: "Present",
       bullets: [
         "Founded Vrymdor and took it from idea to public launch as the sole builder, owning product, engineering, design, security and go-to-market.",
-        "Built Vrymdor Business Security, a platform that helps small and mid-size businesses monitor their Linux and Windows servers, find exposed services and review sign-in activity, while raw logs stay on their own servers.",
-        "Built the Vrymdor AI Node, a governance gateway that checks each AI agent request against company policy, removes personal data and secrets, and keeps a tamper-evident audit record.",
-        "Designed human-in-the-loop safeguards so that no high-risk change runs until a person approves it with a hardware security key.",
+        "Built the Vrymdor AI Node, a privacy filter that hides personal data and secret keys before any AI model reads the text and keeps an audit record of every run, for teams on n8n, Make, Zapier, LangChain, MCP clients and GitHub Actions.",
+        "Launched free browser tools that bring in new users: a secret scanner that finds leaked keys and personal data in n8n workflows and fixes them, a live masking playground, and the Arena, a public game that tests the masking.",
+        "Built self-serve sign-up and billing, from a free plan with a hard cap to paid plans with a 14 day trial, so customers start and upgrade without a sales call.",
         "Published an open-source n8n community node on npm and automated Vrymdor's own marketing workflows, with every post passing through the AI Node before it is published.",
         "Launched Vrymdor Pathway Coach, a free AI career-practice tool for K-12 students that needs no accounts and stores no student data.",
       ],
@@ -255,7 +255,7 @@ export const DATA = {
       category: "AI & Automation",
       items: [
         { name: "LLM Integration", icon: BrainCircuit },
-        { name: "AI Agent Governance", icon: ShieldCheck },
+        { name: "AI Privacy and Data Masking", icon: ShieldCheck },
         { name: "Claude API", icon: SiAnthropic },
         { name: "OpenAI API", icon: Icons.openai },
         { name: "Workflow Automation (n8n)", icon: Workflow },
@@ -289,23 +289,24 @@ export const DATA = {
 
   projects: [
     {
-      title: "Vrymdor Business Security",
-      href: "https://vrymdor.com",
-      dates: "Oct 2026 - Present",
+      title: "Vrymdor free tools",
+      href: "https://vrymdor.com/scan/",
+      dates: "Nov 2026 - Present",
       active: true,
       label: "Vrymdor product",
       description:
-        "A security platform for small and mid-size businesses. Each server checks itself every hour, flags exposed services with a plain-English fix, and reports to one shared dashboard.",
+        "A free secret scanner for n8n workflows, a live masking playground and use-case demos that run in the browser, plus the Arena, a public game that tests the masking.",
       impact:
-        "Gives a small team clear security answers without sending its raw logs to an outside cloud.",
-      technologies: ["Python", "TypeScript", "Next.js", "PostgreSQL", "AI/LLM", "Security"],
+        "Shows people what their own workflows leak, and how to fix it, without the workflow leaving their browser.",
+      technologies: ["TypeScript", "Next.js", "React", "Privacy", "Security"],
       links: [
-        { type: "Website", href: "https://vrymdor.com", icon: <Icons.globe className={linkIcon} /> },
+        { type: "Scanner", href: "https://vrymdor.com/scan/", icon: <Icons.globe className={linkIcon} /> },
+        { type: "Playground", href: "https://vrymdor.com/playground/", icon: <Icons.globe className={linkIcon} /> },
       ],
       cover: {
-        from: "#0b0b0f",
-        to: "#1c1606",
-        accent: "#f5b301",
+        from: "#0b0918",
+        to: "#1b1633",
+        accent: "#a78bfa",
         domain: "vrymdor.com",
         logo: "/logos/vrymdor.png",
       },
@@ -317,10 +318,10 @@ export const DATA = {
       active: true,
       label: "Vrymdor product",
       description:
-        "A governance gateway that AI agents call instead of reaching tools and models directly. It checks the agent, applies company policy, removes personal data and secrets, and writes an audit record.",
+        "A privacy filter that sits in front of AI models. It hides emails, card numbers, US Social Security numbers and secret keys before the model reads the text, and keeps a record of every run.",
       impact:
-        "Lets a business adopt AI agents with guardrails it can prove. Works with n8n, Make, GitHub Actions, LangChain, MCP clients and plain HTTP.",
-      technologies: ["AI Agents", "API Design", "Privacy", "Audit Logging", "TypeScript"],
+        "Lets a team send customer messages, invoices and tickets to AI without handing over private data. Works with n8n, Make, Zapier, GitHub Actions, LangChain, MCP clients and plain HTTP.",
+      technologies: ["AI/LLM", "Privacy", "API Design", "Audit Logging", "Python", "TypeScript"],
       links: [
         {
           type: "Docs",
@@ -345,7 +346,7 @@ export const DATA = {
       description:
         "An MIT-licensed n8n node, published on npm, that routes each workflow step through the Vrymdor AI Node. Ready-to-import example workflows are included.",
       impact:
-        "Puts policy checks, data masking and audit records into automation teams' existing n8n workflows.",
+        "Puts data masking and an audit record into automation teams' existing n8n workflows.",
       technologies: ["TypeScript", "Node.js", "n8n", "npm", "Open Source"],
       links: [
         {

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const RESUME_SUMMARY =
-  "Founder of Vrymdor and full-stack AI engineer who designed, built and publicly launched a security and AI governance platform as its sole builder. Builds production web applications with Next.js, TypeScript, React and PostgreSQL, and AI products with strong privacy, audit and human-approval safeguards. Ready to bring founder-level ownership and full-stack and AI expertise to a high-performing team.";
+  "Founder of Vrymdor and full-stack AI engineer who designed, built and publicly launched the Vrymdor AI Node, a privacy filter for AI, as its sole builder. Builds production web applications with Next.js, TypeScript, React and PostgreSQL, and AI products with strong privacy and audit safeguards. Ready to bring founder-level ownership and full-stack and AI expertise to a high-performing team.";
 
 function Heading({ children }: { children: React.ReactNode }) {
   return (
