@@ -127,12 +127,12 @@ export const DATA = {
       {
         icon: BrainCircuit,
         title: "AI Node",
-        text: "Hides emails, card numbers, US Social Security numbers and secret keys before an AI model reads the text, and records every run.",
+        text: "Hides emails, phone numbers, card numbers, US Social Security numbers and secret keys before an AI model reads the text, and records every run.",
       },
       {
         icon: ShieldCheck,
         title: "Free tools",
-        text: "A secret scanner for n8n workflows and a live masking playground that run in the browser, plus the Arena, a public game that tests the masking.",
+        text: "A secret scanner for n8n workflows and a live masking playground that run in the browser, plus the Arena, where ten AI Rivals attack an isolated copy of the AI Node and the community sends them attack ideas.",
       },
       {
         icon: KeyRound,
@@ -173,7 +173,8 @@ export const DATA = {
       bullets: [
         "Founded Vrymdor and took it from idea to public launch as the sole builder, owning product, engineering, design, security and go-to-market.",
         "Built the Vrymdor AI Node, a privacy filter that hides personal data and secret keys before any AI model reads the text and keeps an audit record of every run, for teams on n8n, Make, Zapier, LangChain, MCP clients and GitHub Actions.",
-        "Launched free browser tools that bring in new users: a secret scanner that finds leaked keys and personal data in n8n workflows and fixes them, a live masking playground, and the Arena, a public game that tests the masking.",
+        "Launched free browser tools that bring in new users: a secret scanner that finds leaked keys and personal data in n8n workflows and fixes them, a live masking playground, and the Arena, where ten AI Rivals and community ideas attack an isolated copy of the AI Node, judged by deterministic code, with every fixed break kept as a permanent regression test and credited in a public patch log.",
+        "Built a one-button release pipeline in Vrymdor's operator console: releases run now or on a schedule, every step is tracked live, a failed release rolls back by itself, and customers see a banner with the version in their own time zone.",
         "Built self-serve sign-up and billing, from a free plan with a hard cap to paid plans with a 14 day trial, so customers start and upgrade without a sales call.",
         "Published an open-source n8n community node on npm and automated Vrymdor's own marketing workflows, with every post passing through the AI Node before it is published.",
         "Launched Vrymdor Pathway Coach, a free AI career-practice tool for K-12 students that needs no accounts and stores no student data.",
@@ -295,13 +296,14 @@ export const DATA = {
       active: true,
       label: "Vrymdor product",
       description:
-        "A free secret scanner for n8n workflows, a live masking playground and use-case demos that run in the browser, plus the Arena, a public game that tests the masking.",
+        "A free secret scanner for n8n workflows, a live masking playground and use-case demos that run in the browser, plus the Arena, where ten AI Rivals attack an isolated copy of the AI Node and the community sends them attack ideas.",
       impact:
         "Shows people what their own workflows leak, and how to fix it, without the workflow leaving their browser.",
       technologies: ["TypeScript", "Next.js", "React", "Privacy", "Security"],
       links: [
         { type: "Scanner", href: "https://vrymdor.com/scan/", icon: <Icons.globe className={linkIcon} /> },
         { type: "Playground", href: "https://vrymdor.com/playground/", icon: <Icons.globe className={linkIcon} /> },
+        { type: "Arena", href: "https://app.vrymdor.com/arena", icon: <Icons.globe className={linkIcon} /> },
       ],
       cover: {
         from: "#0b0918",
@@ -318,7 +320,7 @@ export const DATA = {
       active: true,
       label: "Vrymdor product",
       description:
-        "A privacy filter that sits in front of AI models. It hides emails, card numbers, US Social Security numbers and secret keys before the model reads the text, and keeps a record of every run.",
+        "A privacy filter that sits in front of AI models. It hides emails, phone numbers, card numbers, US Social Security numbers and secret keys (even when they are encoded or disguised) before the model reads the text, and keeps a record of every run.",
       impact:
         "Lets a team send customer messages, invoices and tickets to AI without handing over private data. Works with n8n, Make, Zapier, GitHub Actions, LangChain, MCP clients and plain HTTP.",
       technologies: ["AI/LLM", "Privacy", "API Design", "Audit Logging", "Python", "TypeScript"],
