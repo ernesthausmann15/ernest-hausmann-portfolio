@@ -35,6 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={cn("min-h-screen bg-background font-sans text-foreground antialiased", geist.variable, geistMono.variable, display.variable)}>
+        {STUDIO.analyticsDomain && <script defer data-domain={STUDIO.analyticsDomain} src="https://plausible.io/js/script.js" />}
         <a href="#content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-ember focus:px-3 focus:py-2 focus:text-ink">
           Skip to content
         </a>

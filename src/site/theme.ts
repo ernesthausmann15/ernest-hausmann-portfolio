@@ -14,6 +14,8 @@ export const STUDIO = {
   youtube: "", // the channel URL, once it exists
   github: "https://github.com/ernesthausmann15",
   url: "https://ernesthausmann.dev",
+  // Privacy-friendly analytics (no cookies): set to the domain registered at plausible.io to turn it on.
+  analyticsDomain: "",
 } as const;
 
 export const PALETTE = {
