@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const RESUME_SUMMARY =
-  "AI product engineer and founder of Vrymdor who takes AI products from idea to public launch, building with AI coding agents such as Claude Code under his own specs, reviews and tests. As Vrymdor's only builder, designed and launched the Vrymdor AI Node (a privacy filter for AI) with self-serve billing, integrations for n8n, MCP, Make and Zapier, and an AI-versus-AI security Arena. Also builds AI products beyond Vrymdor, including a multi-model commercial production studio and a live well-tracking site for a clean-water nonprofit. Ready to bring founder-level product ownership and fast, tested AI delivery to a product team.";
+  "AI product engineer and founder of Vrymdor who takes AI products from idea to public launch, building with AI coding agents such as Claude Code under his own specs and tests. Designed and launched the Vrymdor AI Node as its only builder, and builds AI products beyond it. Brings founder-level product ownership and fast, tested AI delivery.";
 
 function Heading({ children }: { children: React.ReactNode }) {
   return (
@@ -34,7 +34,7 @@ function Row({ left, right }: { left: React.ReactNode; right: React.ReactNode })
 
 export default function ResumePage() {
   const featured = DATA.projects.filter((p) =>
-    ["Vrymdor AI Node", "AI Commercial Studio", "Light Beneath the Well", "Vrymdor Pathway Coach"].includes(p.title)
+    ["AI Commercial Studio", "Light Beneath the Well", "Vrymdor Pathway Coach"].includes(p.title)
   );
   const skillLine = DATA.skills.map((g) => ({
     category: g.category,
@@ -89,7 +89,7 @@ export default function ResumePage() {
               right={w.location}
             />
             <ul className="mt-1 list-disc space-y-1 pl-5 print:mt-0 print:space-y-0">
-              {w.bullets.map((b) => (
+              {("resumeBullets" in w ? w.resumeBullets : w.bullets).map((b) => (
                 <li key={b}>{b}</li>
               ))}
             </ul>
@@ -113,13 +113,9 @@ export default function ResumePage() {
               }
               right={p.dates}
             />
-            <ul className="list-disc space-y-1 pl-5 print:space-y-0">
-              <li>{p.description}</li>
-              <li>{p.impact}</li>
-            </ul>
-            <p className="text-sm text-muted-foreground print:text-[10.5px] print:text-black">
-              <span className="font-medium text-foreground">Skills: </span>
-              {p.technologies.join(", ")}
+            <p>
+              {"resumeLine" in p && p.resumeLine ? p.resumeLine : `${p.description.split(". ")[0].replace(/\.$/, "")}.`}{" "}
+              <span className="text-muted-foreground print:text-black">({p.technologies.join(", ")})</span>
             </p>
           </div>
         ))}
@@ -129,9 +125,15 @@ export default function ResumePage() {
         <Heading>Education & Certifications</Heading>
         {DATA.education.map((e) => (
           <div key={e.school} className="flex flex-col gap-0.5 break-inside-avoid">
-            <Row left={e.school} right={e.start ? `${e.start} - ${e.end}` : e.end} />
-            <p className="italic">{e.degree}</p>
-            {e.detail && <p className="text-sm text-muted-foreground print:text-[10.5px] print:text-black">{e.detail}</p>}
+            <Row
+              left={
+                <>
+                  {e.school}, <span className="font-normal italic">{e.degree}</span>
+                </>
+              }
+              right={e.start ? `${e.start} - ${e.end}` : e.end}
+            />
+            {e.detail && <p className="text-sm text-muted-foreground print:hidden">{e.detail}</p>}
           </div>
         ))}
       </section>
@@ -159,10 +161,6 @@ export default function ResumePage() {
         ))}
       </section>
 
-      <section className="flex flex-col gap-2">
-        <Heading>Languages</Heading>
-        <p>English (highly proficient)</p>
-      </section>
     </main>
   );
 }

@@ -56,6 +56,7 @@ export type Project = {
   label: string;
   description: string;
   impact: string;
+  resumeLine?: string;
   technologies: readonly string[];
   links: readonly ProjectLink[];
   cover: {
@@ -170,6 +171,14 @@ export const DATA = {
       href: "https://vrymdor.com",
       location: "Nebraska",
       title: "Founder & AI Product Engineer",
+      // The printed resume's shorter list (one page); the site shows every bullet.
+      resumeBullets: [
+        "Took Vrymdor from idea to public launch as the only builder (product, engineering, design, security and go-to-market), building with AI coding agents (Claude Code) held to my own specs, reviews and automated tests.",
+        "Built the Vrymdor AI Node, a privacy filter that hides personal data and secret keys before any AI model reads them and keeps an audit record of every run.",
+        "Designed an AI-versus-AI security Arena: ten AI Rivals attack an isolated copy of the AI Node, code (not a model) judges every attempt, and each fixed break becomes a permanent regression test.",
+        "Shipped integrations where teams already work: an n8n community node on npm, an MCP server on PyPI and the official MCP Registry, and Make and Zapier apps.",
+        "Built self-serve billing and a one-button release pipeline with live steps and automatic rollback.",
+      ],
       logoUrl: "/logos/vrymdor.png",
       start: "Oct 2026",
       end: "Present",
@@ -414,6 +423,8 @@ export const DATA = {
         "A production studio run by AI agents. From a client's website, footage and brief, it writes the brand report, three concepts and the shot list, makes the storyboard, voice-over and music, cuts every length and aspect ratio, checks every frame with a vision model and builds an editable DaVinci Resolve project for the human finishing pass.",
       impact:
         "Each paid step waits for approval and runs under a spend cap. Its own frame checks caught weak AI-generated shots in the first commercial, which led to a better design that cuts the client's real footage in directly.",
+      resumeLine:
+        "A multi-model AI pipeline that turns a client's website, footage and brief into concepts, a storyboard, voice-over, music and every cut of a commercial, with approval gates, spend caps and vision-model QC.",
       technologies: ["Python", "Claude API", "Vision Models", "Multi-Model Pipeline", "ElevenLabs", "DaVinci Resolve"],
       links: [],
       cover: {
