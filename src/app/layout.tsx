@@ -1,136 +1,58 @@
-import Navbar from "@/components/navbar";
-import { ThemeProvider } from "@/components/theme-provider";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { DATA } from "@/data/resume";
+import { SiteNav } from "@/components/studio/site-nav";
+import { Wordmark } from "@/components/studio/wordmark";
+import { STUDIO } from "@/site/theme";
 import { cn } from "@/lib/utils";
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
-import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  weight: ["400", "500", "600", "700"],
-});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans", weight: ["400", "500", "600", "700"] });
+const geistMono = Geist_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono" });
+const display = Instrument_Serif({ subsets: ["latin"], weight: "400", style: ["normal", "italic"], variable: "--font-display" });
 
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-mono",
-});
-
-const TITLE = `${DATA.name} | AI Product Engineer, Founder of Vrymdor`;
+const TITLE = `${STUDIO.owner} | ${STUDIO.title}, ${STUDIO.name}`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(DATA.url),
-  title: {
-    default: TITLE,
-    template: `%s | ${DATA.name}`,
-  },
-  description: DATA.description,
-  applicationName: DATA.name,
-  authors: [{ name: DATA.name, url: DATA.url }],
-  creator: DATA.name,
-  keywords: [
-    "Ernest Hausmann",
-    "Vrymdor",
-    "Founder",
-    "AI Product Engineer",
-    "AI Engineer",
-    "Claude Code",
-    "AI Agents",
-    "MCP",
-    "Full-Stack Developer",
-    "TypeScript",
-    "Next.js",
-    "Python",
-    "Security",
-  ],
+  metadataBase: new URL(STUDIO.url),
+  title: { default: TITLE, template: `%s | ${STUDIO.name}` },
+  description: `${STUDIO.positioning} ${STUDIO.intro}`,
+  applicationName: STUDIO.name,
+  authors: [{ name: STUDIO.owner, url: STUDIO.url }],
+  creator: STUDIO.owner,
+  keywords: ["Ernest Hausmann", "Hausmann Studio", "AI Creative Technologist", "AI commercial production", "AI cinematography", "motion design",
+    "DaVinci Resolve", "spec commercial", "showreel", "creative technologist"],
   alternates: { canonical: "/" },
-  openGraph: {
-    title: TITLE,
-    description: DATA.description,
-    url: DATA.url,
-    siteName: DATA.name,
-    locale: "en_US",
-    type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: `${DATA.name}, Founder of Vrymdor` }],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  twitter: {
-    title: TITLE,
-    description: DATA.description,
-    card: "summary_large_image",
-    images: ["/og.png"],
-  },
+  openGraph: { title: TITLE, description: STUDIO.positioning, url: STUDIO.url, siteName: STUDIO.name, locale: "en_US", type: "website",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: STUDIO.name }] },
+  twitter: { title: TITLE, description: STUDIO.positioning, card: "summary_large_image", images: ["/og.png"] },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 } },
 };
 
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
-  ],
-};
+export const viewport: Viewport = { themeColor: "#0a0a0b", colorScheme: "dark" };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased relative",
-          geist.variable,
-          geistMono.variable
-        )}
-      >
-        <a
-          href="#content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-3 focus:py-2 focus:text-primary-foreground"
-        >
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body className={cn("min-h-screen bg-background font-sans text-foreground antialiased", geist.variable, geistMono.variable, display.variable)}>
+        <a href="#content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-ember focus:px-3 focus:py-2 focus:text-ink">
           Skip to content
         </a>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <TooltipProvider delayDuration={0}>
-            <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0 print:hidden">
-              <FlickeringGrid
-                className="h-full w-full"
-                squareSize={2}
-                gridGap={2}
-                style={{
-                  maskImage: "linear-gradient(to bottom, black, transparent)",
-                  WebkitMaskImage: "linear-gradient(to bottom, black, transparent)",
-                }}
-              />
+        <SiteNav />
+        {children}
+        <footer className="mx-auto mt-32 max-w-7xl border-t border-border px-4 py-10 text-sm text-muted-foreground sm:px-8 print:hidden">
+          <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-center">
+            <Wordmark className="text-foreground" />
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              <a href={`mailto:${STUDIO.email}`} className="hover:text-foreground">Email</a>
+              <a href={STUDIO.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">LinkedIn</a>
+              {STUDIO.youtube && <a href={STUDIO.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-foreground">YouTube</a>}
+              <Link href="/studio/" className="hover:text-foreground">Hire the studio</Link>
+              <Link href="/resume/" className="hover:text-foreground">Resume</Link>
             </div>
-            <div className="relative z-10 max-w-2xl mx-auto py-12 pb-28 sm:py-24 px-6 print:p-0 print:max-w-none">
-              {children}
-              <footer className="mt-16 print:hidden flex flex-col items-center gap-1 text-center text-xs text-muted-foreground">
-                <p>
-                  © {new Date().getFullYear()} {DATA.name}. Founder of{" "}
-                  <a href={DATA.founder.href} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline">
-                    Vrymdor
-                  </a>
-                  .
-                </p>
-              </footer>
-            </div>
-            <Navbar />
-          </TooltipProvider>
-        </ThemeProvider>
+          </div>
+          <p className="mt-6 text-xs">© {new Date().getFullYear()} {STUDIO.owner}. Spec pieces are portfolio work, not affiliated with or endorsed by the brands shown.</p>
+        </footer>
       </body>
     </html>
   );

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const RESUME_SUMMARY =
-  "AI product engineer and founder of Vrymdor who takes AI products from idea to public launch, building with AI coding agents such as Claude Code under his own specs and tests. Designed and launched the Vrymdor AI Node as its only builder, and builds AI products beyond it. Brings founder-level product ownership and fast, tested AI delivery.";
+  "AI creative technologist who built Hausmann Studio, a multi-agent AI commercial production pipeline (research, concept, AI cinematography, motion design, color, sound and finishing in DaVinci Resolve), and directs and finishes every film it makes. Founder of Vrymdor, an AI privacy product designed, built and launched solo with AI coding agents. Brings founder-level ownership, a high craft bar and fast, tested delivery to a creative team.";
 
 function Heading({ children }: { children: React.ReactNode }) {
   return (
@@ -42,7 +42,7 @@ export default function ResumePage() {
   }));
 
   return (
-    <main id="content" className="flex flex-col gap-8 text-[15px] leading-relaxed print:gap-3 print:text-[10.5px] print:leading-snug">
+    <main id="content" className="mx-auto flex max-w-2xl flex-col gap-8 px-6 pt-28 text-[15px] leading-relaxed print:max-w-none print:gap-3 print:p-0 print:text-[10.5px] print:leading-snug">
       <div className="flex flex-wrap items-center justify-between gap-2 print:hidden">
         <Link href="/" className={cn(buttonVariants({ size: "sm", variant: "ghost" }), "gap-1.5")}>
           <ArrowLeft className="size-4" aria-hidden />

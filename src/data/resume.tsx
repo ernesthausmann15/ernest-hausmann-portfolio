@@ -77,7 +77,7 @@ export const DATA = {
   url: "https://ernesthausmann.dev",
   location: "Columbus, Nebraska",
   locationLink: "https://www.google.com/maps/place/Columbus,+NE",
-  role: "AI Product Engineer · Founder of Vrymdor",
+  role: "AI Creative Technologist · Founder of Vrymdor",
   description:
     "AI product engineer. I build AI products end to end, and I build them with AI tools, from the first idea to a public launch.",
   summary:
