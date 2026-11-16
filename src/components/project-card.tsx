@@ -67,24 +67,30 @@ export function ProjectCard({ project, className }: { project: Project; classNam
         className
       )}
     >
-      <a href={href} target="_blank" rel="noopener noreferrer" aria-label={`Open ${title}`} className="block">
+      {href ? (
+        <a href={href} target="_blank" rel="noopener noreferrer" aria-label={`Open ${title}`} className="block">
+          <ProjectCover project={project} />
+        </a>
+      ) : (
         <ProjectCover project={project} />
-      </a>
+      )}
       <div className="flex flex-1 flex-col gap-3 p-5">
         <div className="flex items-start justify-between gap-2">
           <div className="flex flex-col gap-1">
             <h3 className="font-semibold leading-tight">{title}</h3>
             <time className="text-xs text-muted-foreground">{dates}</time>
           </div>
-          <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            aria-label={`Open ${title} in a new tab`}
-          >
-            <ArrowUpRight className="h-4 w-4" aria-hidden />
-          </a>
+          {href && (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              aria-label={`Open ${title} in a new tab`}
+            >
+              <ArrowUpRight className="h-4 w-4" aria-hidden />
+            </a>
+          )}
         </div>
         <p className="text-sm leading-relaxed text-muted-foreground text-pretty">{description}</p>
         <p className="text-sm leading-relaxed text-pretty">

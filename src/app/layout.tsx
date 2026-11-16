@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
   variable: "--font-mono",
 });
 
-const TITLE = `${DATA.name} | Founder of Vrymdor`;
+const TITLE = `${DATA.name} | AI Product Engineer, Founder of Vrymdor`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
@@ -36,7 +36,11 @@ export const metadata: Metadata = {
     "Ernest Hausmann",
     "Vrymdor",
     "Founder",
+    "AI Product Engineer",
     "AI Engineer",
+    "Claude Code",
+    "AI Agents",
+    "MCP",
     "Full-Stack Developer",
     "TypeScript",
     "Next.js",

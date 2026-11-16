@@ -2,7 +2,10 @@ import { Icons } from "@/components/icons";
 import {
   Activity,
   BookOpenText,
+  Bot,
   BrainCircuit,
+  Clapperboard,
+  Droplets,
   FileText,
   FolderKanban,
   HomeIcon,
@@ -73,11 +76,11 @@ export const DATA = {
   url: "https://ernesthausmann.dev",
   location: "Columbus, Nebraska",
   locationLink: "https://www.google.com/maps/place/Columbus,+NE",
-  role: "Founder of Vrymdor · AI Engineer & Full-Stack Developer",
+  role: "AI Product Engineer · Founder of Vrymdor",
   description:
-    "AI engineer and full-stack developer. I design, build and launch secure AI products and web applications, from first idea to public release.",
+    "AI product engineer. I build AI products end to end, and I build them with AI tools, from the first idea to a public launch.",
   summary:
-    "I'm the founder of [Vrymdor](https://vrymdor.com), which makes the Vrymdor AI Node: a privacy filter that hides customer emails, card numbers and secret keys before any AI model reads them, and keeps a record of every run. I designed, built and launched it on my own.\n\nBefore Vrymdor, I built production web applications with Next.js, TypeScript, React and PostgreSQL. Today I also work in IT systems and infrastructure at Loup Power District and study cybersecurity at Central Community College. I was a team captain on a national championship football team, and I bring the same habits to engineering: clear communication, ownership and steady execution.",
+    "I'm an AI product engineer and the founder of [Vrymdor](https://vrymdor.com). I take AI products from idea to launch, and I build them with AI: I direct coding agents like Claude Code through planning, building, testing and release, while I own the product decisions, the quality bar and the launch.\n\nAs Vrymdor's only builder, I designed and launched the Vrymdor AI Node, a privacy filter that hides customer data and secret keys before any AI model reads them, together with its self-serve plans, its integrations for n8n, MCP, Make and Zapier, an AI-versus-AI security Arena and the console that releases it all. I also build AI products beyond Vrymdor: a live well-tracking website for a clean-water nonprofit, and an AI studio that turns a client's footage and brief into a finished commercial.\n\nBefore Vrymdor, I built production web applications with Next.js, TypeScript, React and PostgreSQL. I also work in IT systems at Loup Power District and study cybersecurity at Central Community College. I was a team captain on a national championship football team, and I bring the same habits to engineering: clear communication, ownership and steady execution.",
   avatarUrl: "/logos/vrymdor.png",
   resumeUrl: "/resume/",
   navbar: [
@@ -142,7 +145,7 @@ export const DATA = {
       {
         icon: Network,
         title: "Open source",
-        text: "A published n8n community node that brings the AI Node into automation workflows.",
+        text: "A published n8n community node on npm and an MCP server on PyPI and the official MCP Registry, so the AI Node works inside n8n, Claude and VS Code.",
       },
     ],
     links: [
@@ -155,7 +158,7 @@ export const DATA = {
       { type: "Status", href: "https://status.vrymdor.com", icon: <Activity className={linkIcon} /> },
       {
         type: "npm",
-        href: "https://www.npmjs.com/package/n8n-nodes-vrymnox",
+        href: "https://www.npmjs.com/package/n8n-nodes-vrymdor",
         icon: <SiNpm className={linkIcon} />,
       },
     ],
@@ -166,17 +169,19 @@ export const DATA = {
       company: "Vrymdor (Vrymnox Systems LLC)",
       href: "https://vrymdor.com",
       location: "Nebraska",
-      title: "Founder & Lead Engineer",
+      title: "Founder & AI Product Engineer",
       logoUrl: "/logos/vrymdor.png",
       start: "Oct 2026",
       end: "Present",
       bullets: [
-        "Founded Vrymdor and took it from idea to public launch as the sole builder, owning product, engineering, design, security and go-to-market.",
+        "Founded Vrymdor and took it from idea to public launch as the only builder, owning product, engineering, design, security and go-to-market, and building with AI coding agents (Claude Code) held to my own specs, reviews and automated tests.",
         "Built the Vrymdor AI Node, a privacy filter that hides personal data and secret keys before any AI model reads the text and keeps an audit record of every run, for teams on n8n, Make, Zapier, LangChain, MCP clients and GitHub Actions.",
-        "Launched free browser tools that bring in new users: a secret scanner that finds leaked keys and personal data in n8n workflows and fixes them, a live masking playground, and the Arena, where ten AI Rivals and community ideas attack an isolated copy of the AI Node, judged by deterministic code, with every fixed break kept as a permanent regression test and credited in a public patch log.",
+        "Designed the Arena, an AI-versus-AI security game: ten AI Rivals and community ideas attack an isolated copy of the AI Node, deterministic code (not a model) judges every attempt, and every fixed break becomes a permanent regression test credited in a public patch log.",
+        "Launched free browser tools that bring in new users: a secret scanner that finds leaked keys and personal data in n8n workflows and fixes them, and a live masking playground.",
         "Built a one-button release pipeline in Vrymdor's operator console: releases run now or on a schedule, every step is tracked live, a failed release rolls back by itself, and customers see a banner with the version in their own time zone.",
         "Built self-serve sign-up and billing, from a free plan with a hard cap to paid plans with a 14 day trial, so customers start and upgrade without a sales call.",
-        "Published an open-source n8n community node on npm and automated Vrymdor's own marketing workflows, with every post passing through the AI Node before it is published.",
+        "Put the AI Node inside the tools teams already use: an open-source n8n community node on npm (passed n8n's automated review), an MCP server on PyPI and the official MCP Registry for Claude and VS Code, and apps for Make and Zapier.",
+        "Ran the company's own operations on AI: automated marketing workflows where every post passes through the AI Node before it is published, and a bug list that clears an error only after a release's checks prove the fix.",
         "Launched Vrymdor Pathway Coach, a free AI career-practice tool for K-12 students that needs no accounts and stores no student data.",
       ],
     },
@@ -238,6 +243,20 @@ export const DATA = {
 
   skills: [
     {
+      category: "AI Product Engineering",
+      items: [
+        { name: "Claude Code and AI Coding Agents", icon: Bot },
+        { name: "Claude API", icon: SiAnthropic },
+        { name: "OpenAI API", icon: Icons.openai },
+        { name: "Agents and Tool Use", icon: BrainCircuit },
+        { name: "MCP Servers", icon: Network },
+        { name: "Vision and Multimodal Pipelines", icon: Clapperboard },
+        { name: "AI Evaluation and Regression Tests", icon: Activity },
+        { name: "AI Privacy and Data Masking", icon: ShieldCheck },
+        { name: "Workflow Automation (n8n)", icon: Workflow },
+      ],
+    },
+    {
       category: "Languages & Frameworks",
       items: [
         { name: "TypeScript", icon: SiTypescript },
@@ -250,17 +269,6 @@ export const DATA = {
         { name: "FastAPI", icon: SiFastapi },
         { name: "Tailwind CSS", icon: SiTailwindcss },
         { name: "Redux", icon: SiRedux },
-      ],
-    },
-    {
-      category: "AI & Automation",
-      items: [
-        { name: "LLM Integration", icon: BrainCircuit },
-        { name: "AI Privacy and Data Masking", icon: ShieldCheck },
-        { name: "Claude API", icon: SiAnthropic },
-        { name: "OpenAI API", icon: Icons.openai },
-        { name: "Workflow Automation (n8n)", icon: Workflow },
-        { name: "Data Pipelines", icon: Network },
       ],
     },
     {
@@ -290,30 +298,6 @@ export const DATA = {
 
   projects: [
     {
-      title: "Vrymdor free tools",
-      href: "https://vrymdor.com/scan/",
-      dates: "Nov 2026 - Present",
-      active: true,
-      label: "Vrymdor product",
-      description:
-        "A free secret scanner for n8n workflows, a live masking playground and use-case demos that run in the browser, plus the Arena, where ten AI Rivals attack an isolated copy of the AI Node and the community sends them attack ideas.",
-      impact:
-        "Shows people what their own workflows leak, and how to fix it, without the workflow leaving their browser.",
-      technologies: ["TypeScript", "Next.js", "React", "Privacy", "Security"],
-      links: [
-        { type: "Scanner", href: "https://vrymdor.com/scan/", icon: <Icons.globe className={linkIcon} /> },
-        { type: "Playground", href: "https://vrymdor.com/playground/", icon: <Icons.globe className={linkIcon} /> },
-        { type: "Arena", href: "https://app.vrymdor.com/arena", icon: <Icons.globe className={linkIcon} /> },
-      ],
-      cover: {
-        from: "#0b0918",
-        to: "#1b1633",
-        accent: "#a78bfa",
-        domain: "vrymdor.com",
-        logo: "/logos/vrymdor.png",
-      },
-    },
-    {
       title: "Vrymdor AI Node",
       href: "https://docs.vrymdor.com/ai-node.html",
       dates: "Oct 2026 - Present",
@@ -340,25 +324,49 @@ export const DATA = {
       },
     },
     {
+      title: "Vrymdor free tools",
+      href: "https://vrymdor.com/scan/",
+      dates: "Nov 2026 - Present",
+      active: true,
+      label: "Vrymdor product",
+      description:
+        "A free secret scanner for n8n workflows, a live masking playground and use-case demos that run in the browser, plus the Arena, where ten AI Rivals attack an isolated copy of the AI Node and the community sends them attack ideas.",
+      impact:
+        "Shows people what their own workflows leak, and how to fix it, without the workflow leaving their browser.",
+      technologies: ["TypeScript", "Next.js", "React", "Privacy", "Security"],
+      links: [
+        { type: "Scanner", href: "https://vrymdor.com/scan/", icon: <Icons.globe className={linkIcon} /> },
+        { type: "Playground", href: "https://vrymdor.com/playground/", icon: <Icons.globe className={linkIcon} /> },
+        { type: "Arena", href: "https://app.vrymdor.com/arena", icon: <Icons.globe className={linkIcon} /> },
+      ],
+      cover: {
+        from: "#0b0918",
+        to: "#1b1633",
+        accent: "#a78bfa",
+        domain: "vrymdor.com",
+        logo: "/logos/vrymdor.png",
+      },
+    },
+    {
       title: "Vrymdor n8n Community Node",
-      href: "https://www.npmjs.com/package/n8n-nodes-vrymnox",
+      href: "https://www.npmjs.com/package/n8n-nodes-vrymdor",
       dates: "Nov 2026",
       active: true,
       label: "Open source",
       description:
-        "An MIT-licensed n8n node, published on npm, that routes each workflow step through the Vrymdor AI Node. Ready-to-import example workflows are included.",
+        "An MIT-licensed n8n node, published on npm with provenance, that routes each workflow step through the Vrymdor AI Node and works as a tool for n8n's AI Agent. Ready-to-import example workflows are included.",
       impact:
         "Puts data masking and an audit record into automation teams' existing n8n workflows.",
       technologies: ["TypeScript", "Node.js", "n8n", "npm", "Open Source"],
       links: [
         {
           type: "npm",
-          href: "https://www.npmjs.com/package/n8n-nodes-vrymnox",
+          href: "https://www.npmjs.com/package/n8n-nodes-vrymdor",
           icon: <SiNpm className={linkIcon} />,
         },
         {
           type: "Source",
-          href: "https://github.com/ernesthausmann15/n8n-nodes-vrymnox",
+          href: "https://github.com/ernesthausmann15/n8n-nodes-vrymdor",
           icon: <Icons.github className={linkIcon} />,
         },
       ],
@@ -394,6 +402,52 @@ export const DATA = {
         accent: "#34d399",
         domain: "coach.vrymdor.com",
         logo: "/logos/vrymdor.png",
+      },
+    },
+    {
+      title: "AI Commercial Studio",
+      href: "",
+      dates: "Nov 2026 - Present",
+      active: true,
+      label: "AI product",
+      description:
+        "A production studio run by AI agents. From a client's website, footage and brief, it writes the brand report, three concepts and the shot list, makes the storyboard, voice-over and music, cuts every length and aspect ratio, checks every frame with a vision model and builds an editable DaVinci Resolve project for the human finishing pass.",
+      impact:
+        "Each paid step waits for approval and runs under a spend cap. Its own frame checks caught weak AI-generated shots in the first commercial, which led to a better design that cuts the client's real footage in directly.",
+      technologies: ["Python", "Claude API", "Vision Models", "Multi-Model Pipeline", "ElevenLabs", "DaVinci Resolve"],
+      links: [],
+      cover: {
+        from: "#120c05",
+        to: "#2a1a08",
+        accent: "#f5b041",
+        domain: "private tool",
+        icon: Clapperboard,
+      },
+    },
+    {
+      title: "Light Beneath the Well",
+      href: "https://lightbeneaththewell.org",
+      dates: "Nov 2026 - Present",
+      active: true,
+      label: "Nonprofit product",
+      description:
+        "The website of a clean-water nonprofit in Uganda, where donors follow every well live from survey to water flowing. The field team posts updates from their phones, and the foundation reviews and publishes from a simple dashboard.",
+      impact:
+        "Turns each step of a well into a public update, so donors see exactly where their gift went, and the team in Uganda can report without any training.",
+      technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Product Design"],
+      links: [
+        {
+          type: "Website",
+          href: "https://lightbeneaththewell.org",
+          icon: <Icons.globe className={linkIcon} />,
+        },
+      ],
+      cover: {
+        from: "#04121f",
+        to: "#0a2a4a",
+        accent: "#e0b301",
+        domain: "lightbeneaththewell.org",
+        icon: Droplets,
       },
     },
     {

@@ -8,12 +8,12 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: `Resume of ${DATA.name}, Founder of Vrymdor, AI Engineer and Full-Stack Developer.`,
+  description: `Resume of ${DATA.name}, AI Product Engineer and Founder of Vrymdor.`,
   alternates: { canonical: "/resume/" },
 };
 
 const RESUME_SUMMARY =
-  "Founder of Vrymdor and full-stack AI engineer who designed, built and publicly launched the Vrymdor AI Node, a privacy filter for AI, as its sole builder. Builds production web applications with Next.js, TypeScript, React and PostgreSQL, and AI products with strong privacy and audit safeguards. Ready to bring founder-level ownership and full-stack and AI expertise to a high-performing team.";
+  "AI product engineer and founder of Vrymdor who takes AI products from idea to public launch, building with AI coding agents such as Claude Code under his own specs, reviews and tests. As Vrymdor's only builder, designed and launched the Vrymdor AI Node (a privacy filter for AI) with self-serve billing, integrations for n8n, MCP, Make and Zapier, and an AI-versus-AI security Arena. Also builds AI products beyond Vrymdor, including a multi-model commercial production studio and a live well-tracking site for a clean-water nonprofit. Ready to bring founder-level product ownership and fast, tested AI delivery to a product team.";
 
 function Heading({ children }: { children: React.ReactNode }) {
   return (
@@ -34,7 +34,7 @@ function Row({ left, right }: { left: React.ReactNode; right: React.ReactNode })
 
 export default function ResumePage() {
   const featured = DATA.projects.filter((p) =>
-    ["Vrymdor AI Node", "Vrymdor Pathway Coach", "Liquidation Hub", "Skinstric"].includes(p.title)
+    ["Vrymdor AI Node", "AI Commercial Studio", "Light Beneath the Well", "Vrymdor Pathway Coach"].includes(p.title)
   );
   const skillLine = DATA.skills.map((g) => ({
     category: g.category,
@@ -53,7 +53,7 @@ export default function ResumePage() {
 
       <header className="flex flex-col gap-1">
         <h1 className="text-3xl font-bold tracking-tight print:text-2xl">{DATA.name}</h1>
-        <p className="text-lg font-medium print:text-sm">Founder of Vrymdor · AI Engineer & Full-Stack Developer</p>
+        <p className="text-lg font-medium print:text-sm">{DATA.role}</p>
         <p className="text-sm text-muted-foreground print:text-[10.5px] print:text-black">
           {DATA.location} ·{" "}
           <a href={`mailto:${DATA.contact.email}`} className="underline-offset-4 hover:underline">
@@ -103,9 +103,13 @@ export default function ResumePage() {
           <div key={p.title} className="flex flex-col gap-1 break-inside-avoid">
             <Row
               left={
-                <a href={p.href} className="underline-offset-4 hover:underline">
-                  {p.title}
-                </a>
+                p.href ? (
+                  <a href={p.href} className="underline-offset-4 hover:underline">
+                    {p.title}
+                  </a>
+                ) : (
+                  p.title
+                )
               }
               right={p.dates}
             />

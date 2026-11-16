@@ -25,7 +25,7 @@ export default function ContactSection() {
       <div className="relative flex flex-col items-center gap-5 text-center">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Let&apos;s talk</h2>
         <p className="mx-auto max-w-lg text-balance text-muted-foreground">
-          I&apos;m open to AI engineering, full-stack and security roles. The best way to reach me is by email at{" "}
+          I&apos;m open to AI product engineering roles, and to AI engineering and full-stack roles where I build with AI tools. The best way to reach me is by email at{" "}
           <a
             href={`mailto:${DATA.contact.email}`}
             className="rounded-sm text-blue-600 underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring dark:text-blue-400"
