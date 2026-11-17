@@ -8,12 +8,12 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: `Resume of ${DATA.name}, AI Product Engineer and Founder of Vrymdor.`,
+  description: `Resume of ${DATA.name}, AI Automation and Integrations Engineer and Founder of Vrymdor.`,
   alternates: { canonical: "/resume/" },
 };
 
 const RESUME_SUMMARY =
-  "AI creative technologist who built Hausmann Studio, a multi-agent AI commercial production pipeline (research, concept, AI cinematography, motion design, color, sound and finishing in DaVinci Resolve), and directs and finishes every film it makes. Founder of Vrymdor, an AI privacy product designed, built and launched solo with AI coding agents. Brings founder-level ownership, a high craft bar and fast, tested delivery to a creative team.";
+  "AI automation and integrations engineer. Built the n8n, Make, Zapier and MCP integrations for the Vrymdor AI Node, a privacy layer for AI I launched solo with AI coding agents, and took each through the platform's own review. Works across APIs, webhooks, OAuth 2.0 and testing against live systems. Seeking AI Automation, Solutions and Integrations Engineer roles.";
 
 function Heading({ children }: { children: React.ReactNode }) {
   return (
@@ -34,7 +34,7 @@ function Row({ left, right }: { left: React.ReactNode; right: React.ReactNode })
 
 export default function ResumePage() {
   const featured = DATA.projects.filter((p) =>
-    ["AI Commercial Studio", "Light Beneath the Well", "Vrymdor Pathway Coach"].includes(p.title)
+    ["Vrymdor n8n Community Node", "Make and Zapier Apps", "AI Commercial Studio"].includes(p.title)
   );
   const skillLine = DATA.skills.map((g) => ({
     category: g.category,

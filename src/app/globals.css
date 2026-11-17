@@ -5,10 +5,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --color-ember: #ff5b2e;
-  --color-bone: #f3efe7;
-  --color-ash: #8e8b85;
-  --color-ink: #0a0a0b;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -82,66 +78,37 @@
 }
 
 .dark {
-  /* Hausmann Studio: a screening room. Ink, bone type, one ember accent (a tally light). */
-  --background: #0a0a0b;
-  --foreground: #f3efe7;
-  --card: #141416;
-  --card-foreground: #f3efe7;
-  --popover: #141416;
-  --popover-foreground: #f3efe7;
-  --primary: #f3efe7;
-  --primary-foreground: #0a0a0b;
-  --secondary: #1c1c1f;
-  --secondary-foreground: #f3efe7;
-  --muted: #1c1c1f;
-  --muted-foreground: #a19d96;
-  --accent: #1c1c1f;
-  --accent-foreground: #f3efe7;
-  --destructive: #ff5b2e;
-  --border: #26262a;
-  --input: #26262a;
-  --ring: #ff5b2e;
-  --chart-1: #ff5b2e;
-  --chart-2: #f3efe7;
-  --chart-3: #8e8b85;
-  --chart-4: #ffd9cc;
-  --chart-5: #5c5a56;
-  --sidebar: #141416;
-  --sidebar-foreground: #f3efe7;
-  --sidebar-primary: #ff5b2e;
-  --sidebar-primary-foreground: #0a0a0b;
-  --sidebar-accent: #1c1c1f;
-  --sidebar-accent-foreground: #f3efe7;
-  --sidebar-border: #26262a;
-  --sidebar-ring: #ff5b2e;
-}
-
-@media print {
-  .dark, :root {
-    --background: #ffffff;
-    --foreground: #000000;
-    --muted-foreground: #000000;
-    --border: #000000;
-  }
-}
-
-.font-display {
-  font-family: var(--font-display), ui-serif, Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-}
-
-.grain::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.07;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  --background: oklch(0.18 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
 }
 
 @layer base {

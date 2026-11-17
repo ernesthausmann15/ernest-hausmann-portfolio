@@ -16,6 +16,9 @@ import {
 } from "lucide-react";
 import {
   SiAnthropic,
+  SiMake,
+  SiPypi,
+  SiZapier,
   SiCloudflare,
   SiDocker,
   SiExpress,
@@ -77,11 +80,11 @@ export const DATA = {
   url: "https://ernesthausmann.dev",
   location: "Columbus, Nebraska",
   locationLink: "https://www.google.com/maps/place/Columbus,+NE",
-  role: "AI Creative Technologist · Founder of Vrymdor",
+  role: "AI Automation & Integrations Engineer · Founder of Vrymdor",
   description:
-    "AI product engineer. I build AI products end to end, and I build them with AI tools, from the first idea to a public launch.",
+    "AI automation and integrations engineer. I build automation systems in n8n, Make and Zapier, connect AI to the tools a business already runs, and keep customer data safe while it runs.",
   summary:
-    "I'm an AI product engineer and the founder of [Vrymdor](https://vrymdor.com). I take AI products from idea to launch, and I build them with AI: I direct coding agents like Claude Code through planning, building, testing and release, while I own the product decisions, the quality bar and the launch.\n\nAs Vrymdor's only builder, I designed and launched the Vrymdor AI Node, a privacy filter that hides customer data and secret keys before any AI model reads them, together with its self-serve plans, its integrations for n8n, MCP, Make and Zapier, an AI-versus-AI security Arena and the console that releases it all. I also build AI products beyond Vrymdor: a live well-tracking website for a clean-water nonprofit, and an AI studio that turns a client's footage and brief into a finished commercial.\n\nBefore Vrymdor, I built production web applications with Next.js, TypeScript, React and PostgreSQL. I also work in IT systems at Loup Power District and study cybersecurity at Central Community College. I was a team captain on a national championship football team, and I bring the same habits to engineering: clear communication, ownership and steady execution.",
+    "I'm an AI automation and integrations engineer and the founder of [Vrymdor](https://vrymdor.com). I build the systems that connect AI to the tools a business already runs: workflows in n8n, Make and Zapier, the APIs, webhooks and OAuth flows behind them, and the checks that keep customer data out of AI models.\n\nAs Vrymdor's only builder, I designed and launched the Vrymdor AI Node, a privacy layer that removes personal data and secret keys before an AI model reads them, and I built its integrations myself: an n8n community node on npm, apps for Make and Zapier, and an MCP server on PyPI and the official MCP Registry. I took each one through the platform's own review, turned the reviewers' feedback into fixes, and backed every submission with automated tests against a live node. I build with AI coding agents (Claude Code), and I own the design, the debugging and the result.\n\nI also work in IT systems at Loup Power District and study cybersecurity at Central Community College. I was a team captain on a national championship football team, and I bring the same habits to customer and engineering work: clear communication, ownership and steady execution.",
   avatarUrl: "/logos/vrymdor.png",
   resumeUrl: "/resume/",
   navbar: [
@@ -125,7 +128,7 @@ export const DATA = {
     href: "https://vrymdor.com",
     logoUrl: "/logos/vrymdor.png",
     tagline:
-      "A privacy filter for AI: private details hidden before any AI model reads them.",
+      "A privacy layer for AI automations: personal data and secret keys removed before any AI model reads them.",
     status: "Publicly launched in November 2026",
     highlights: [
       {
@@ -134,9 +137,9 @@ export const DATA = {
         text: "Hides emails, phone numbers, card numbers, US Social Security numbers and secret keys before an AI model reads the text, and records every run.",
       },
       {
-        icon: ShieldCheck,
-        title: "Free tools",
-        text: "A secret scanner for n8n workflows and a live masking playground that run in the browser, plus the Arena, where ten AI Rivals attack an isolated copy of the AI Node and the community sends them attack ideas.",
+        icon: Workflow,
+        title: "Integrations",
+        text: "Built for the tools teams already automate with: an n8n community node, apps for Make and Zapier, an MCP server for Claude and VS Code, and plain HTTP.",
       },
       {
         icon: KeyRound,
@@ -170,27 +173,29 @@ export const DATA = {
       company: "Vrymdor (Vrymnox Systems LLC)",
       href: "https://vrymdor.com",
       location: "Nebraska",
-      title: "Founder & AI Product Engineer",
+      title: "Founder & AI Automation Engineer",
       // The printed resume's shorter list (one page); the site shows every bullet.
       resumeBullets: [
-        "Took Vrymdor from idea to public launch as the only builder (product, engineering, design, security and go-to-market), building with AI coding agents (Claude Code) held to my own specs, reviews and automated tests.",
-        "Built the Vrymdor AI Node, a privacy filter that hides personal data and secret keys before any AI model reads them and keeps an audit record of every run.",
-        "Designed an AI-versus-AI security Arena: ten AI Rivals attack an isolated copy of the AI Node, code (not a model) judges every attempt, and each fixed break becomes a permanent regression test.",
-        "Shipped integrations where teams already work: an n8n community node on npm, an MCP server on PyPI and the official MCP Registry, and Make and Zapier apps.",
-        "Built self-serve billing and a one-button release pipeline with live steps and automatic rollback.",
+        "Took Vrymdor from idea to public launch as the only builder, using AI coding agents (Claude Code) held to my own specs, reviews and tests.",
+        "Built the Vrymdor AI Node, a privacy layer that removes personal data and secret keys before an AI model reads them, with agent identity, short lived tokens and an audit trail.",
+        "Shipped its integrations: an n8n community node on npm, Make and Zapier apps, and an MCP server on PyPI and the official MCP Registry.",
+        "Took each through the platform's review: relaunched the n8n node after its first rejection, and resolved all 14 items of Make's review with an OAuth 2.0 client credentials connection.",
+        "Built a pre-submission check that runs each platform's own validation and sends each app's real requests to a live node, with a regression test for every bug found.",
       ],
       logoUrl: "/logos/vrymdor.png",
       start: "Oct 2026",
       end: "Present",
       bullets: [
-        "Founded Vrymdor and took it from idea to public launch as the only builder, owning product, engineering, design, security and go-to-market, and building with AI coding agents (Claude Code) held to my own specs, reviews and automated tests.",
-        "Built the Vrymdor AI Node, a privacy filter that hides personal data and secret keys before any AI model reads the text and keeps an audit record of every run, for teams on n8n, Make, Zapier, LangChain, MCP clients and GitHub Actions.",
+        "Founded Vrymdor and took it from idea to public launch as the only builder, owning product, engineering, design, security and go-to-market, and building with AI coding agents (Claude Code) held to my own specs, code reviews and automated tests.",
+        "Built the Vrymdor AI Node, a privacy layer that removes personal data and secret keys before an AI model reads them, with agent identity, short lived tokens, policy checks and an audit record of every run, for teams on n8n, Make, Zapier, LangChain, MCP clients and GitHub Actions.",
+        "Built and shipped its integrations myself: an MIT-licensed n8n community node on npm with provenance that also works as a tool for n8n's AI Agent, a Make custom app, a Zapier app, and an MCP server on PyPI and the official MCP Registry for Claude and VS Code.",
+        "Took each integration through the platform's own review: renamed and relinted the n8n node after its first rejection, recorded the demo video n8n asked for, and resolved all 14 items of Make's review by moving the app to OAuth 2.0 client credentials with authorization and error handling in the app's Base.",
+        "Built a pre-submission check that runs each platform's own validation (n8n lint, zapier validate, Make structure) and sends each app's real requests to a live node, and added a regression test for every bug found in review, such as an n8n crash on older n8n versions and a Make request body sent as a quoted string.",
         "Designed the Arena, an AI-versus-AI security game: ten AI Rivals and community ideas attack an isolated copy of the AI Node, deterministic code (not a model) judges every attempt, and every fixed break becomes a permanent regression test credited in a public patch log.",
         "Launched free browser tools that bring in new users: a secret scanner that finds leaked keys and personal data in n8n workflows and fixes them, and a live masking playground.",
         "Built a one-button release pipeline in Vrymdor's operator console: releases run now or on a schedule, every step is tracked live, a failed release rolls back by itself, and customers see a banner with the version in their own time zone.",
         "Built self-serve sign-up and billing, from a free plan with a hard cap to paid plans with a 14 day trial, so customers start and upgrade without a sales call.",
-        "Put the AI Node inside the tools teams already use: an open-source n8n community node on npm (passed n8n's automated review), an MCP server on PyPI and the official MCP Registry for Claude and VS Code, and apps for Make and Zapier.",
-        "Ran the company's own operations on AI: automated marketing workflows where every post passes through the AI Node before it is published, and a bug list that clears an error only after a release's checks prove the fix.",
+        "Ran the company's own operations on automation: marketing workflows where every post passes through the AI Node before it is published, and a bug list that clears an error only after a release's checks prove the fix.",
         "Launched Vrymdor Pathway Coach, a free AI career-practice tool for K-12 students that needs no accounts and stores no student data.",
       ],
     },
@@ -252,17 +257,27 @@ export const DATA = {
 
   skills: [
     {
-      category: "AI Product Engineering",
+      category: "Automation & Integrations",
+      items: [
+        { name: "n8n (Workflows and Custom Nodes)", icon: Workflow },
+        { name: "Make (Custom Apps)", icon: SiMake },
+        { name: "Zapier (Platform CLI Apps)", icon: SiZapier },
+        { name: "REST APIs and Webhooks", icon: Network },
+        { name: "OAuth 2.0", icon: KeyRound },
+        { name: "MCP Servers", icon: Network },
+        { name: "Integration Testing", icon: Activity },
+      ],
+    },
+    {
+      category: "AI Engineering",
       items: [
         { name: "Claude Code and AI Coding Agents", icon: Bot },
         { name: "Claude API", icon: SiAnthropic },
         { name: "OpenAI API", icon: Icons.openai },
         { name: "Agents and Tool Use", icon: BrainCircuit },
-        { name: "MCP Servers", icon: Network },
-        { name: "Vision and Multimodal Pipelines", icon: Clapperboard },
-        { name: "AI Evaluation and Regression Tests", icon: Activity },
         { name: "AI Privacy and Data Masking", icon: ShieldCheck },
-        { name: "Workflow Automation (n8n)", icon: Workflow },
+        { name: "AI Evaluation and Regression Tests", icon: Activity },
+        { name: "Vision and Multimodal Pipelines", icon: Clapperboard },
       ],
     },
     {
@@ -365,7 +380,9 @@ export const DATA = {
       description:
         "An MIT-licensed n8n node, published on npm with provenance, that routes each workflow step through the Vrymdor AI Node and works as a tool for n8n's AI Agent. Ready-to-import example workflows are included.",
       impact:
-        "Puts data masking and an audit record into automation teams' existing n8n workflows.",
+        "Puts data masking and an audit record into automation teams' existing n8n workflows. Passed n8n's automated checks; n8n's verification review is in progress.",
+      resumeLine:
+        "An n8n node on npm that runs each workflow step through the AI Node and works as an AI Agent tool.",
       technologies: ["TypeScript", "Node.js", "n8n", "npm", "Open Source"],
       links: [
         {
@@ -385,6 +402,59 @@ export const DATA = {
         accent: "#ff6d5a",
         domain: "npmjs.com",
         icon: Workflow,
+      },
+    },
+    {
+      title: "Make and Zapier Apps",
+      href: "https://vrymdor.com/developers/connect",
+      dates: "Nov 2026",
+      active: true,
+      label: "Integrations",
+      description:
+        "A Make custom app (an OAuth 2.0 client credentials connection, a governed action module with fields nested by action, and a universal API call module) and a Zapier app built with the Zapier Platform CLI (two actions and session auth), both sending each step through the Vrymdor AI Node.",
+      impact:
+        "Resolved all 14 items of Make's review, and the Zapier app passes Zapier's integration checks with no errors. Both apps are shared by invitation while the public listings are pending.",
+      resumeLine:
+        "A Make custom app with OAuth 2.0 client credentials and a Zapier CLI app, each tested against a live node.",
+      technologies: ["Make", "Zapier", "OAuth 2.0", "JavaScript", "REST APIs", "Integration Testing"],
+      links: [
+        {
+          type: "Guide",
+          href: "https://vrymdor.com/developers/connect",
+          icon: <BookOpenText className={linkIcon} />,
+        },
+      ],
+      cover: {
+        from: "#0d0a1f",
+        to: "#24104a",
+        accent: "#a78bfa",
+        domain: "vrymdor.com",
+        icon: Workflow,
+      },
+    },
+    {
+      title: "Vrymdor MCP Server",
+      href: "https://pypi.org/project/vrymdor-node/",
+      dates: "Nov 2026",
+      active: true,
+      label: "Open source",
+      description:
+        "A Python client and MCP server, published on PyPI and the official MCP Registry, that lets Claude Desktop, Cursor and VS Code use the Vrymdor AI Node as a tool, with no Docker needed (it runs with uvx).",
+      impact: "Brings data masking and policy checks to AI assistants and coding tools, not only to workflows.",
+      technologies: ["Python", "MCP", "PyPI", "Open Source"],
+      links: [
+        {
+          type: "PyPI",
+          href: "https://pypi.org/project/vrymdor-node/",
+          icon: <SiPypi className={linkIcon} />,
+        },
+      ],
+      cover: {
+        from: "#07101f",
+        to: "#0b2140",
+        accent: "#60a5fa",
+        domain: "pypi.org",
+        icon: Network,
       },
     },
     {
@@ -424,7 +494,7 @@ export const DATA = {
       impact:
         "Each paid step waits for approval and runs under a spend cap. Its own frame checks caught weak AI-generated shots in the first commercial, which led to a better design that cuts the client's real footage in directly.",
       resumeLine:
-        "A multi-model AI pipeline that turns a client's website, footage and brief into concepts, a storyboard, voice-over, music and every cut of a commercial, with approval gates, spend caps and vision-model QC.",
+        "A multi-agent pipeline that turns a client's brief and footage into every cut of a commercial, with approval gates, spend caps and vision-model QC.",
       technologies: ["Python", "Claude API", "Vision Models", "Multi-Model Pipeline", "ElevenLabs", "DaVinci Resolve"],
       links: [],
       cover: {

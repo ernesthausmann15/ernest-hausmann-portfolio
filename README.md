@@ -1,7 +1,7 @@
 # ernesthausmann.dev
 
-The personal portfolio of **Ernest Hausmann**, Founder of [Vrymdor](https://vrymdor.com), AI engineer and
-full-stack developer.
+The personal portfolio of **Ernest Hausmann**, AI automation and integrations engineer and founder of [Vrymdor](https://vrymdor.com),
+built for AI Automation, Solutions and Integrations Engineer roles.
 
 - **Home** (`/`): about, the Vrymdor founder overview, experience, skills, projects, education, leadership and contact.
 - **Resume** (`/resume/`): a print-ready resume. Use the "Print or save as PDF" button to download it.
