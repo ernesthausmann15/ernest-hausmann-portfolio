@@ -150,16 +150,6 @@ export default function ResumePage() {
         </ul>
       </section>
 
-      <section className="flex flex-col gap-3">
-        <Heading>Athletic Leadership</Heading>
-        {DATA.leadership.map((l) => (
-          <div key={l.title} className="flex flex-col gap-1 break-inside-avoid">
-            <Row left={l.title} right={l.dates} />
-            <Row left={<span className="font-normal italic">{l.organization}</span>} right={l.location} />
-            <p>{l.description}</p>
-          </div>
-        ))}
-      </section>
 
     </main>
   );
