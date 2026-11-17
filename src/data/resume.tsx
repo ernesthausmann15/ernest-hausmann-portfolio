@@ -441,6 +441,8 @@ export const DATA = {
       description:
         "A Python client and MCP server, published on PyPI and the official MCP Registry, that lets Claude Desktop, Cursor and VS Code use the Vrymdor AI Node as a tool, with no Docker needed (it runs with uvx).",
       impact: "Brings data masking and policy checks to AI assistants and coding tools, not only to workflows.",
+      resumeLine:
+        "An MCP server on PyPI and the MCP Registry that lets Claude Desktop, Cursor and VS Code use the AI Node as a tool, with no Docker.",
       technologies: ["Python", "MCP", "PyPI", "Open Source"],
       links: [
         {
@@ -481,28 +483,6 @@ export const DATA = {
         accent: "#34d399",
         domain: "coach.vrymdor.com",
         logo: "/logos/vrymdor.png",
-      },
-    },
-    {
-      title: "AI Commercial Studio",
-      href: "",
-      dates: "Nov 2026 - Present",
-      active: true,
-      label: "AI product",
-      description:
-        "A production studio run by AI agents. From a client's website, footage and brief, it writes the brand report, three concepts and the shot list, makes the storyboard, voice-over and music, cuts every length and aspect ratio, checks every frame with a vision model and builds an editable DaVinci Resolve project for the human finishing pass.",
-      impact:
-        "Each paid step waits for approval and runs under a spend cap. Its own frame checks caught weak AI-generated shots in the first commercial, which led to a better design that cuts the client's real footage in directly.",
-      resumeLine:
-        "A multi-agent pipeline that turns a client's brief and footage into every cut of a commercial, with approval gates, spend caps and vision-model QC.",
-      technologies: ["Python", "Claude API", "Vision Models", "Multi-Model Pipeline", "ElevenLabs", "DaVinci Resolve"],
-      links: [],
-      cover: {
-        from: "#120c05",
-        to: "#2a1a08",
-        accent: "#f5b041",
-        domain: "private tool",
-        icon: Clapperboard,
       },
     },
     {

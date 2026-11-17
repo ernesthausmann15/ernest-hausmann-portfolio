@@ -34,7 +34,7 @@ function Row({ left, right }: { left: React.ReactNode; right: React.ReactNode })
 
 export default function ResumePage() {
   const featured = DATA.projects.filter((p) =>
-    ["Vrymdor n8n Community Node", "Make and Zapier Apps", "AI Commercial Studio"].includes(p.title)
+    ["Vrymdor n8n Community Node", "Make and Zapier Apps", "Vrymdor MCP Server"].includes(p.title)
   );
   const skillLine = DATA.skills.map((g) => ({
     category: g.category,

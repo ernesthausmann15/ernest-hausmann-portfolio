@@ -11,7 +11,7 @@ export default function ProjectsSection() {
       <SectionHeading
         label="Projects"
         title="Things I've built and shipped"
-        description="AI products come first: Vrymdor, then AI products I built beyond it, then full-stack work from my internships and bootcamp. Every project is live except the commercial studio, a private tool."
+        description="AI products come first: Vrymdor, then AI products I built beyond it, then full-stack work from my internships and bootcamp. Every project is live."
       />
       <div className="mx-auto grid max-w-[800px] grid-cols-1 gap-4 sm:grid-cols-2">
         {DATA.projects.map((project, id) => (
